@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+body{
+    min-height: 100%;
+}
+
+html{
+    height: 100%;   
+}
+
+.bodyIndexLayout{
+    display: grid;
+    grid-template-areas: "asidebox mainbox"
+                         "footerbox footerbox";
+    grid-template-rows: auto auto;
+    grid-template-columns: max-content auto;
+}
+
+/******aside******/
+
+.asidebox{
+    grid-area: asidebox;
+    display: grid;
+    grid-template-areas: "LogoBox"
+                         "ImageBox"
+                         "MenuBox";
+    grid-template-rows: 20% 40% auto;
+    background:linear-gradient(to right, rgb(153, 35, 35), rgb(153, 32, 32), rgb(136, 2, 2) );
+    padding: 20px;
+}
+
+.logobox{
+    grid-area: LogoBox;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 20px 20px 20px;
+}
+
+.logoH1, .logoH1:link, .logoH1:visited{
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    text-align: center;
+}
+
+.imageBox{
+    grid-area: ImageBox;
+    border-radius: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.chadImage{
+    max-width: 220px;
+
+    height: 100%;
+}
+
+/*Nav menu*/
+
+.navMenuBox{
+    margin-right: 25px;
+    grid-area: MenuBox;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.listNavMenu{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.listNavItem{
+    text-align: center;
+}
+
+.listNavLink, .listNavLink:link, .listNavLink:visited{
+    color: white;
+    text-decoration: none;
+}
+
+.listNavLink:hover{
+    color: rgb(219, 219, 219);
+}
+
+/******Index******/
+
+.presentationTextBox{
+    background: linear-gradient(rgba(255, 0, 0, 0.527),black),url("/img/paisajes.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px;
+    color: white;
+    text-align: center;
+}
+
+.textDescriptionTitle{
+    font-size: 60px;
+    padding: 20px;
+}
+
+.textDescriptionParagraph{
+    font-size: 22px;
+}
+
+.mainbox{
+    grid-area: mainbox;
+    width: auto;
+}
+
+.footerbox{
+    grid-area: footerbox;
+    border: 1px solid blue;
+}

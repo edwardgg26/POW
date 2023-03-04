@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;;
+}
+
+html{
+    min-height: 100%;
+}
+
+body{
+    height: 100%;
+}
+
+.bodyGridLayout{
+    display: grid;
+    grid-template-areas: "headerbox"
+                         "conteinbox"
+                         "footerbox";
+    grid-template-rows: 80px auto auto;
+}
+
+
+/*Header*/
+.headerBox{
+    grid-area: headerbox;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    background-color: rgb(150, 19, 45);
+}
+
+.headerLogoBox{
+    margin-left: 30px;
+}
+
+.logoLink, .logoLink:link, .logoLink:visited{
+    color: white;
+    text-decoration: none;
+}
+
+/*Nav Menu*/
+.navMenuBox{
+    margin-right: 30px;
+}
+
+.navList{
+    list-style-type: none;
+    display: flex;
+}
+
+.navListLink,.navListLink:link,.navListLink:visited{
+    color: white;
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 20px;
+}
+
+.navListLink:hover{
+    background-color: rgb(119, 22, 42);
+}
+
+/*Mision*/
+
+.misionVisionBox{
+    grid-area: conteinbox;
+    padding: 20px;
+    border: 1px solid lightgray;
+    border-radius: 20px;
+    margin:50px;
+    font-size: 24px;
+    text-align: center;
+    min-height: 350px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.misionVisionTitle{
+    margin-bottom: 30px;
+}
+
+.misionVisionParrafo{
+    margin: 0 50px;
+}
+
+/*vision*/
+
+.visionImg{
+    max-height: 350px;
+    margin: 30px;
+    margin-bottom: 0;
+}
+
+/*Contacto*/
+
+.contactosSection{
+    grid-area: conteinbox;
+    display: grid;
+    grid-template-areas: "formulario textoContactUs";
+    grid-template-columns: 30% auto;
+    border: 1px solid lightgray;
+    border-radius: 20px;
+    margin:50px;
+    padding: 20px;
+    background:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.6)),url("/img/contactanos_image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: max-content;
+    color: white;
+}
+
+.formularioContacto{
+    grid-area: formulario;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.formularioContacto>label{
+    margin-bottom: 20px;
+}
+
+.formularioContacto>input{
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.formularioContacto>textarea{
+    padding: 10px;
+    margin-bottom: 20px;
+    height: 110px;
+}
+
+.botonContactos{
+    background-color: rgb(150, 19, 45);
+    width: 40%;
+    padding: 10px;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.botonContactos:hover{
+    background-color: rgb(119, 22, 42);
+}
+
+.contactUsText{
+    grid-area: textoContactUs;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    text-align: center;
+}
+
+.contactUsText>h1{
+    font-size: 50px;
+}
+
+.contactUsText>p{
+    font-size: 25px;
+    padding: 20px;
+}
