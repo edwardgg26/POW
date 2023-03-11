@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos con JS</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="bodyLayout">
+    <header class="headerBox">
+        <div class="headerLogoBox">
+            <h1>
+                <ion-icon name="medical-outline" class="iconTitle"></ion-icon> Ejercicios con JavaScript Pt 2.
+            </h1>
+        </div>
+        <nav class="navMenuBox">
+            <ul class="navList">
+                <li class="navListItem"><a href="/calculadora.html" class="navListLink">Calculadora</a></li>
+                <li class="navListItem"><a href="/index.html" class="navListLink">Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="conteinBox">
+        <div class="formularioNButtonBox">
+            <form id="formularioNombre"class="formularioTextoBox">
+                <label for="labelNombre" class="formLabel">Nombre:</label>
+                <input type="text" id="inputNombre" name="labelNombre" class="inputFormulario">
+                <label for="labelApellido" class="formLabel">Apellido:</label>
+                <input type="text" id="inputApellido" name="labelApellido" class="inputFormulario">
+                <label for="labelEdad" class="formLabel">Edad:</label>
+                <input type="number" id="inputEdad" name="labelEdad" class="inputFormulario">
+            </form>
+            <button class="botonFormulario" onclick="imprimirResultados()">Show</button>    
+        </div>
+
+        <div class="resultadosBox">
+            
+        </div>
+    </section>
+    
+    <footer class="footerBox">Footer</footer>
+
+    <script src="/js/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+/********Universal********/
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+html{
+    height: 100%;
+}
+
+.bodyLayout{
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: 70px auto auto;
+}
+
+/********Header********/
+
+.headerBox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, CadetBlue 40%,LightBlue,PowderBlue	);
+    color: white;
+}
+
+/*Logo*/
+
+.headerLogoBox{
+    margin-left: 30px;
+}
+
+.iconTitle{
+    position: relative;
+    top:5px;
+}
+
+/*Nav Menu*/
+
+.navMenuBox{
+    margin-right: 30px;
+}
+
+.navList{
+    list-style-type: none;
+    display: flex;
+}
+
+.navListLink{
+    padding: 0 20px;
+}
+
+
+/********Contein********/
+
+.conteinBox{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+
+/*Form*/
+
+.formularioNButtonBox{
+    display: grid;
+    padding: 30px;
+}
+
+.formularioTextoBox, .formularioHipotenusaBox, .formularioCuadraticaBox{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    font-size: 18px;
+}
+
+.formLabel{
+    margin: 10px 0;
+}
+
+.inputFormulario{
+    font-size: 18px;
+    padding: 10px;
+}
+
+.botonFormulario{
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 18px;
+    width: 40%;
+    background-color: PowderBlue;
+    cursor: pointer;
+    border: 0;
+    border-radius: 10px;
+}
+
+.botonFormulario:hover{
+    background-color: LightBlue;
+
+}
+/********Footer********/
+
+
+
+/********Responsive********/
+
+@media (max-width: 600px){
+    .bodyLayout{
+        display: grid;
+        grid-template-rows: min-content auto auto;
+    }    
+
+    .navMenuBox{
+        display: none;
+    }
+}

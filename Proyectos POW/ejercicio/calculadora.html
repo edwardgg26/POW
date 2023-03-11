@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos con JS</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="bodyLayout">
+    <header class="headerBox">
+        <div class="headerLogoBox">
+            <h1>
+                <ion-icon name="medical-outline" class="iconTitle"></ion-icon> Ejercicios con JavaScript Pt 2.
+            </h1>
+        </div>
+        <nav class="navMenuBox">
+            <ul class="navList">
+                <li class="navListItem"><a href="/calculadora.html" class="navListLink">Calculadora</a></li>
+                <li class="navListItem"><a href="/index.html" class="navListLink">Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="conteinBox">
+
+        <div class="campoDeTexoBox">
+            <p id="campoDeTexo">0</p>
+        </div>
+
+        <div class="numerosBox">
+            <button class="botonCalculadora numeros"onclick="addDigit(1)">1</button>    
+            <button class="botonCalculadora numeros"onclick="addDigit(2)">2</button>
+            <button class="botonCalculadora numeros"onclick="addDigit(3)">3</button>
+            <button class="botonCalculadora numeros"onclick="addDigit(4)">4</button>
+            <button class="botonCalculadora numeros"onclick="addDigit(5)">5</button> 
+            <button class="botonCalculadora numeros"onclick="addDigit(6)">6</button> 
+            <button class="botonCalculadora numeros"onclick="addDigit(7)">7</button> 
+            <button class="botonCalculadora numeros"onclick="addDigit(8)">8</button> 
+            <button class="botonCalculadora numeros"onclick="addDigit(9)">9</button>          
+            <button class="botonCalculadora numeros"onclick="addDigit(0)">0</button>    
+            <button class="botonCalculadora numeros"onclick="addDigit('.')">.</button>
+            <button class="botonCalculadora borrar"onclick="borrar()">C</button>    
+        </div>
+
+        <div class="borrarBox">
+            
+        </div>
+
+        <div class="operadoresBox">
+            <button class="botonCalculadora operadores"onclick="addDigit('+')">+</button>    
+            <button class="botonCalculadora operadores"onclick="addDigit('-')">-</button>
+            <button class="botonCalculadora operadores"onclick="addDigit('/')">/</button>
+            <button class="botonCalculadora operadores"onclick="addDigit('=')">=</button>  
+        </div>
+        <div class="operadores2Box">
+            <button class="botonCalculadora operadores2"onclick="addDigit('*')">*</button>
+            <button class="botonCalculadora operadores2"onclick="addDigit('**')">**</button>
+            <button class="botonCalculadora operadores2"onclick="addDigit('%')">%</button>        
+        </div>
+    </section>
+    
+    <footer class="footerBox">Footer</footer>
+
+    <script src="/js/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

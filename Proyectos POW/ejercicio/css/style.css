@@ -1,0 +1,218 @@
+/********Universal********/
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+html{
+    height: 100%;
+}
+
+.bodyLayout{
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: max-content auto auto;
+}
+
+:root{
+    --anchoAltoBoton: 70px;
+}
+
+/********Header********/
+
+.headerBox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    color: white;
+    padding: 15px 0;
+}
+
+/*Logo*/
+
+.headerLogoBox{
+    margin-left: 30px;
+}
+
+.iconTitle{
+    position: relative;
+    top:5px;
+    color: gold;
+}
+
+/*Nav Menu*/
+
+.navMenuBox{
+    margin-right: 30px;
+}
+
+.navList{
+    list-style-type: none;
+    display: flex;
+}
+
+.navListLink,.navListLink:link,.navListLink:visited{
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.navListLink:hover{
+    background-color: gold;
+    text-decoration: none;
+    border-radius: 15px;
+    color: black;
+}
+
+/********Contein********/
+
+.conteinBox{
+    display: grid;
+    grid-template-areas: "campoTextBox campoTextBox" 
+                         "botonesNumeroBox botonesOperadorBox"
+                         "operadores2Box botonesOperadorBox";
+    grid-template-columns: min-content min-content;
+    grid-template-rows: min-content min-content;
+    max-width: 500px;
+    padding: 30px;
+    font-size: 45px;
+}
+
+/*Calculadora*/
+
+.campoDeTexoBox{
+    grid-area: campoTextBox;
+    border-radius: 5px;
+    height: var(--anchoAltoBoton);
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: 15px;
+    margin-bottom: 10px;
+    overflow-x: auto;
+}
+
+.numerosBox{
+    grid-area: botonesNumeroBox;
+    display: grid;
+    grid-template-columns: var(--anchoAltoBoton) var(--anchoAltoBoton) var(--anchoAltoBoton);
+    grid-template-rows: var(--anchoAltoBoton) var(--anchoAltoBoton) var(--anchoAltoBoton);
+}
+
+.operadoresBox{
+    grid-area: botonesOperadorBox;
+    display: grid;
+    grid-template-columns: var(--anchoAltoBoton);
+    grid-template-rows: var(--anchoAltoBoton) var(--anchoAltoBoton) var(--anchoAltoBoton) var(--anchoAltoBoton);
+}
+
+.operadores2Box{
+    grid-area: operadores2Box;
+    display: grid;
+    grid-template-columns: var(--anchoAltoBoton) var(--anchoAltoBoton) var(--anchoAltoBoton);
+    grid-template-rows: var(--anchoAltoBoton);
+}
+
+.botonCalculadora{
+    font-size: 25px;
+    border-radius: 30%;
+    border: 0;
+    cursor: pointer;
+    padding: 10px;
+    margin: 2px;
+}
+
+.botonCalculadora.numeros{
+    background-color: white;
+}
+
+.botonCalculadora.numeros:hover{
+    background-color: rgb(241, 241, 241);
+}
+
+.botonCalculadora.operadores{
+    background-color: gold;
+}
+
+.botonCalculadora.operadores:hover{
+    background-color: rgb(228, 194, 1);
+}
+
+.botonCalculadora.operadores2{
+    background-color: rgb(231, 231, 231);
+}
+
+.botonCalculadora.operadores2:hover{
+    background-color: lightgray;
+}
+
+.botonCalculadora.borrar{
+    background-color: crimson;
+    color: white;
+}
+
+.botonCalculadora.borrar:hover{
+    background-color: rgb(179, 12, 45);
+    color: white;
+}
+/*Form*/
+
+.formularioNButtonBox{
+    display: grid;
+    padding: 30px;
+}
+
+.formularioTextoBox, .formularioHipotenusaBox, .formularioCuadraticaBox{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    font-size: 18px;
+}
+
+.formLabel{
+    margin: 10px 0;
+}
+
+.inputFormulario{
+    font-size: 18px;
+    padding: 10px;
+}
+
+.botonFormulario{
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 18px;
+    width: 40%;
+    background-color: gold;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.botonFormulario:hover{
+    background-color: rgb(218, 185, 0);
+}
+
+
+/********Footer********/
+
+
+
+/********Responsive********/
+
+@media (max-width: 600px){
+    .bodyLayout{
+        display: grid;
+        grid-template-rows: min-content auto auto;
+    }    
+
+    .navMenuBox{
+        display: none;
+    }
+}
