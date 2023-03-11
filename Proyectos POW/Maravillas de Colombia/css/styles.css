@@ -1,0 +1,373 @@
+/********Universal********/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html{
+    min-height: 100%;
+}
+
+body{
+    height: 100%;
+    position: relative;
+}
+
+.bodyLayout{
+    display: grid;
+    grid-template-areas: "headerbox"
+                         "presentationBox"
+                         "generalInformationbox"
+                         "accesoBox"
+                         "admisionBox"
+                         "horariosBox"
+                         "contactoBox"
+                         "footerBox";
+}
+
+/***header***/
+
+.headerbox{
+    grid-area: headerbox;
+    height: max-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    color: white;
+    position: absolute;
+    width: 100%;
+    border-bottom: 1px solid white;
+    padding: 25px;
+}
+
+/*Nav Menu*/
+
+.navList{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.navListLink, .navListLink:link, .navListLink:visited{
+    color: white;
+    text-decoration: none;
+    padding: 30px;
+    font-size: 16px;
+}
+
+.navListLink:hover{
+    color: rgb(231, 231, 231);
+}
+
+/***Presentacion***/
+
+.presentationBox{
+    grid-area: presentationBox;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url("/img/backgrounds/presentation_bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 500px;
+    color: white;
+    text-align: center;
+}
+
+.presentationBox>h2{
+    font-size: 60px;
+    margin: 20px;
+    margin-top: 60px;
+}
+
+.presentationBox>p{
+    font-size: 25px;
+    margin: 20px 70px;
+}
+
+/***General Info***/
+
+.generalInformationbox{
+    grid-area: generalInformationbox;
+    display: grid;
+}
+
+.generalInfoTitleBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.informationGeneralTitle{
+    font-size: 50px;
+    border: solid 5px yellowgreen;
+    border-radius: 20px;
+    padding: 8px 25px;
+    margin: 20px;
+    margin-top: 60px;
+    box-shadow: 2px 2px 10px gray;
+}
+
+.conteinInfoBox{
+    display: grid;
+    margin: 0 60px;
+}
+
+.boxfigureAndDescription{
+    margin: 20px 0;
+}
+
+.boxfigureAndDescription.typeA{
+    display: grid;
+    align-items: center;
+    grid-template-areas: "descriptionBox imageBox";
+}
+
+.boxfigureAndDescription.typeB{
+    display: grid;
+    align-items: center;
+    grid-template-areas: "imageBox descriptionBox";
+}
+
+/*descripcion*/
+
+.descriptionFigure{
+    grid-area: descriptionBox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.descriptionTitle{
+    font-size: 30px;
+    border-bottom: 5px solid YellowGreen;
+    margin: 20px;
+}
+
+.parrafoGeneralInfo{
+    font-size: 20px;
+    margin: 20px;
+}
+
+/*imagenes*/
+
+.figureImageBox{
+    grid-area: imageBox;
+}
+
+.imageInfo{
+    height: 300px;
+    padding-left: 20px;
+}
+
+.imageInfo.typeA{
+    
+    border-radius: 84% 16% 70% 30% / 30% 66% 34% 70%;
+    
+}
+
+.imageInfo.typeB{
+    border-radius: 19% 81% 20% 80% / 76% 15% 85% 24%;
+}
+
+.imageInfo.typeC{
+    border-radius: 45% 55% 46% 54% / 74% 25% 75% 26% ;
+}
+
+.imageInfo.typeD{
+    border-radius: 20% 80% 84% 16% / 74% 66% 34% 26%;
+}
+
+.accesoBox{
+    grid-area: accesoBox;
+}
+
+.admisionBox{
+    grid-area: admisionBox;
+}
+
+.horariosBox{
+    grid-area: horariosBox;
+}
+
+/***Acceso,Admision,Horarios***/
+
+.accesoBox, .horariosBox, .admisionBox{
+    margin-left: 50px;
+}
+
+/***Contact***/
+
+.contactZoneBox{
+    grid-area: contactoBox;
+    display: grid;
+    grid-template-areas: "formulario textoContactUs";
+    grid-template-columns: 30% auto;
+    border: 1px solid lightgray;
+    border-radius: 20px;
+    margin:50px;
+    padding: 20px;
+    background:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.6)),url("/img/backgrounds/contact_bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: max-content;
+    color: white;
+}
+
+.contactForm{
+    grid-area: formulario;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.contactForm>label{
+    margin-bottom: 20px;
+}
+
+.contactForm>input{
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.contactForm>textarea{
+    padding: 10px;
+    margin-bottom: 20px;
+    height: 110px;
+}
+
+.botonContacto{
+    background-color: yellowgreen;
+    width: 40%;
+    padding: 10px;
+    color: black;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+
+.botonContacto:hover{
+    background-color: rgb(141, 180, 63);
+}
+
+.contactUsText{
+    grid-area: textoContactUs;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    text-align: center;
+}
+
+.contactUsText>h1{
+    font-size: 50px;
+}
+
+.contactUsText>p{
+    font-size: 25px;
+    padding: 20px;
+}
+
+
+/***footer***/
+
+.footerBox{
+    grid-area: footerBox;
+    display: grid;
+    justify-content: center;
+    /*background-color: SlateGray;*/
+    min-height: 150px;
+    padding: 20px;
+    color: black;
+}
+
+/*Footer Links*/
+
+.linksFooterBox{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px 50px;
+}
+
+.footerLinksMenu{
+    margin: 0 30px;
+    text-align: center;
+}
+
+.footerList{
+    list-style-type: none;
+    margin-top: 10px;
+}
+
+.footerLink,.footerLink:link,.footerLink:visited{
+    color: black;
+    text-decoration: none;
+}
+
+.footerLink:hover{
+    color: rgb(54, 54, 54);
+    text-decoration: underline;
+}
+
+/*Footer social*/
+
+.socialBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.socialTitle{
+    font-size: 30px;
+}
+
+.listSocialIcons{
+    list-style-type: none;
+    display: flex;
+}
+
+.listSocialIcons::before{
+    content: "";
+    width: 100px;
+    height: 2px;
+    background-color: YellowGreen;
+    position: relative;
+    top: auto;
+}
+
+.listSocialIcons::after{
+    content: "";
+    width: 100px;
+    height: 2px;
+    background-color: YellowGreen;
+    position: relative;
+    top: auto;
+}
+
+.listIconLink, .listIconLink:link, .listIconLink:visited{
+    color: black;
+    font-size: 30px;
+    margin: 20px;
+}
+
+.listIconLink:hover{
+    color: rgb(54, 54, 54);
+}
+
+.socialTitle{
+    padding: 20px;
+}
